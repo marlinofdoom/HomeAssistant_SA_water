@@ -1,4 +1,4 @@
-"""Initialize the Sensus Analytics Water Integration."""
+"""Initialize the Sensus Analytics Integration (Water)"""
 
 from __future__ import annotations
 

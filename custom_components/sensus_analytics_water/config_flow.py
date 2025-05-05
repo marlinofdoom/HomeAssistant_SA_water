@@ -1,4 +1,4 @@
-"""Config flow for Sensus Analytics Water Integration."""
+"""Config flow for Sensus Analytics Integration (Water)."""
 
 from __future__ import annotations
 

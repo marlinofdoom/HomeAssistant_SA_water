@@ -1,4 +1,4 @@
-"""Constants for the Sensus Analytics Water Integration."""
+"""Constants for the Sensus Analytics Integration (Water)"""
 
 DOMAIN = "sensus_analytics_water"
 

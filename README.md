@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/MAINTAINER-%40marlinofdoom-red?style=for-the-badge)](https://github.com/marlinofdoom)
 [![](https://img.shields.io/badge/COMMUNITY-FORUM-success?style=for-the-badge)](https://community.home-assistant.io)
 
-# HomeAssistant - Sensus Analytics Water Integration
+# HomeAssistant - Sensus Analytics Integration (Water)
 
 A custom Home Assistant integration to monitor your water usage from Sensus Analytics, forked from the water-only version by Zestysoft (https://github.com/zestysoft/sensus_analytics_integration/), but with renamed variables that more specifically point to water meters, to deconflict from similar electric and gas versions. 
 
