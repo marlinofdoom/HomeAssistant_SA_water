@@ -30,7 +30,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Update Sensus Analytics (Natural Gas) Configuration",
+        "title": "Update Sensus Analytics (Water) Configuration",
         "data": {
           "base_url": "Base URL",
           "username": "Username",
