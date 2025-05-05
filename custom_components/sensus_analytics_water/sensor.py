@@ -321,7 +321,7 @@ class SensusAnalyticsBillingCostSensor(StaticUnitSensorBase):
         if usage is None:
             return None
         usage_gallons = self._convert_usage(usage)
-        return self._calculate_cost(usage_gallons)
+        return self._calculate_water_cost(usage_gallons)
 
     def _calculate_water_cost(self, usage_gallons):
         """Calculate the billing cost based on tiers and service fee."""
@@ -376,9 +376,9 @@ class SensusAnalyticsDailyFeeSensor(StaticUnitSensorBase):
         if usage is None:
             return None
         usage_gallons = self._convert_usage(usage)
-        return self._calculate_daily_fee(usage_gallons)
+        return self._calculate_water_daily_fee(usage_gallons)
 
-    def _calculate_daily_water_fee(self, usage_gallons):
+    def _calculate_water_daily_fee(self, usage_gallons):
         """Calculate the daily fee based on tiers."""
         tier1_gallons = self.coordinator.config_entry.data.get("water_tier1_gallons") or 0
         tier1_price = self.coordinator.config_entry.data.get("water_tier1_price")
