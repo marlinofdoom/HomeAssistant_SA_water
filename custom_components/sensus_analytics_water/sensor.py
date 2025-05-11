@@ -49,6 +49,7 @@ class UsageConversionMixin:
             return None
         if usage_unit is None:
             usage_unit = self.coordinator.data.get("usageUnit")
+        
 
         config_unit_type = self.coordinator.config_entry.data.get("unit_type")
 
@@ -99,7 +100,10 @@ class DynamicUnitSensorBase(UsageConversionMixin, CoordinatorEntity, SensorEntit
     @property
     def native_unit_of_measurement(self):
         """Return the unit of measurement."""
-        return self._get_usage_unit()
+        unit = self._get_usage_unit()
+        if unit == "GAL":
+            unit = "gal"    # convert to the HA standard
+        return unit
 
 
 class StaticUnitSensorBase(UsageConversionMixin, CoordinatorEntity, SensorEntity):
@@ -159,7 +163,10 @@ class SensusAnalyticsUsageUnitSensor(StaticUnitSensorBase):
     @property
     def native_value(self):
         """Return the state of the sensor."""
-        return self.coordinator.data.get("usageUnit")
+        unit = self.coordinator.data.get("usageUnit")
+        if unit == "GAL":
+            unit = "gal"
+        return unit
 
 
 class SensusAnalyticsMeterAddressSensor(StaticUnitSensorBase):
