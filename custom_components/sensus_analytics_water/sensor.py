@@ -69,7 +69,7 @@ class UsageConversionMixin:
     def _get_usage_unit(self):
         """Determine the unit of measurement for usage sensors."""
         usage_unit = self.coordinator.data.get("usageUnit")
-        config_unit_type = self.coordinator.config_entry.data.get("unit_type")
+        config_unit_type = self.coordinator.config_entry.data.get("water_unit_type")
 
         if usage_unit == "CF" and config_unit_type == "gal":
             return "gal"
