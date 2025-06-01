@@ -57,7 +57,7 @@ class SensusAnalyticsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 vol.Required(CONF_PASSWORD): str,
                 vol.Required(CONF_ACCOUNT_NUMBER): str,
                 vol.Required(CONF_WATER_METER_NUMBER): str,
-                vol.Required("water_unit_type", default="CCF"): vol.In(["CCF", "gal"]),
+                vol.Required("water_unit_type", default="gal"): vol.In(["CCF", "gal"]),
                 vol.Optional("water_tier1_gallons"): cv.positive_float,
                 vol.Required("water_tier1_price", default=0.0128): cv.positive_float,
                 vol.Optional("water_tier2_gallons"): cv.positive_float,
@@ -139,7 +139,7 @@ class SensusAnalyticsOptionsFlow(config_entries.OptionsFlow):
                 ): str,
                 vol.Required(
                     "water_unit_type",
-                    default=current_data.get("water_unit_type", "CCF"),
+                    default=current_data.get("water_unit_type", "gal"),
                 ): vol.In(["CCF", "gal"]),
                 vol.Optional(
                     "water_tier1_gallons",
